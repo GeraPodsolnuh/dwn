@@ -1,0 +1,23 @@
+import requests
+
+lg = "London"
+svo = "svo"
+ch = "Cherepovets"
+
+url_template = 'https://wttr.in/{}?lang=ru&?M&?n$?q$?T'
+url = url_template.format(lg)
+# print(url)
+response = requests.get(url)
+print(response.text)
+
+url_template = 'https://wttr.in/{}?lang=ru&?M&?n$?q$?T'
+url = url_template.format(svo)
+# print(url)
+response = requests.get(url)
+print(response.text)
+
+url_template = 'https://wttr.in/{}?lang=ru&?M&?n$?q$?T'
+url = url_template.format(ch)
+# print(url)
+response = requests.get(url)
+print(response.text)
